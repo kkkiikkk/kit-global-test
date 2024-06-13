@@ -1,8 +1,10 @@
 // Core
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
-import { Document, SchemaTypes } from "mongoose";
+import { Document, SchemaTypes } from 'mongoose';
 
-@Schema()
+@Schema({
+  versionKey: false,
+})
 export class User {
   @Prop({
     type: SchemaTypes.String,
@@ -18,4 +20,5 @@ export class User {
   password: string;
 }
 
-export const UserDocument = Document<User>;
+export type UserDocument = Document & User;
+export const UserSchema = SchemaFactory.createForClass(User);

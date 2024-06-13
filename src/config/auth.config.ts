@@ -1,4 +1,4 @@
 export const authConfig = () => ({
-  access: process.env.ACCESS,
-  refresh: process.env.REFRESH,
+  access: process.env.ACCESS_SECRET,
+  refresh: process.env.REFRESH_SECRET,
 });

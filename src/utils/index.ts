@@ -1,0 +1,11 @@
+export enum ENV {
+  PORT,
+  ACCESS_SECRET,
+  REFRESH_SECRET,
+  DB_LINK,
+}
+
+export enum STRATEGY {
+  ACCESS = 'JWT-ACCESS',
+  REFRESH = 'JWT-REFRESH',
+}
